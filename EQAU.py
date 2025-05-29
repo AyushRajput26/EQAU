@@ -21,7 +21,7 @@ def get_data():
     WITH LatestRTC AS (
         SELECT MAX(RTCdateTime) AS recent_time
         FROM singlephase.BlockLoadProfile
-        WHERE CAST(createddate AS DATE) = CAST(GETUTCDATE() AS DATE)
+        WHERE CAST(createddate AS DATE) = CAST(GETUTCDATE() AS DATE) and meterno in (select MeterNo from dash nolock)
     ),
     MeterStats AS (
         SELECT 
