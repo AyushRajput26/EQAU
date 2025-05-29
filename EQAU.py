@@ -4,8 +4,8 @@ import pandas as pd
 import plotly.express as px
 
 # --- Streamlit UI Config ---
-st.set_page_config(layout='wide', page_title='Energy Dashboard')
-st.title("Energy Usage Dashboard")
+st.set_page_config(layout='wide', page_title='K-Mesh Dashboard')
+st.title("K-Mesh Dashboard")
 
 # --- DB Connection ---
 def get_data():
